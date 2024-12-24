@@ -9,3 +9,10 @@ def greet():
 
 
 greet()
+
+
+def greet2():
+    return "This is second greet function"
+
+
+greet2()
