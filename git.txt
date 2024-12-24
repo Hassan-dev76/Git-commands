@@ -1,0 +1,65 @@
+What is Version Control?
+Overview: Understand the concept of version control, its importance in software development, and how it helps manage changes to code over time.
+Key Points:
+Version control systems (VCS) track modifications and provide a historical record.
+Essential for collaboration among developers, preventing conflicts and managing changes effectively.
+
+2. Git Basics
+Overview: Learn the foundational commands and concepts of Git.
+Key Commands:
+git init: Initialize a new Git repository.
+git clone: Copy an existing repository.
+git status: Check the status of your files in the working directory.
+git add: Stage changes for commit.
+git commit: Save changes to the repository with a message.
+
+3. Branching and Merging
+Overview: Explore how to create branches for feature development and merge them back into the main branch.
+Key Commands:
+git branch: List branches or create a new branch.
+git checkout: Switch between branches.
+git merge: Merge changes from one branch into another.
+
+4. Viewing History
+Overview: Learn how to view the history of commits in your repository.
+Key Commands:
+git log: Show the commit history.
+git diff: View differences between commits or branches.
+
+5. Working with Remotes
+Overview: Understand how to work with remote repositories (e.g., GitHub).
+Key Commands:
+git remote add: Add a remote repository.
+git push: Upload local changes to a remote repository.
+git pull: Fetch and merge changes from a remote repository.
+
+6. Rewriting History
+Overview: Learn techniques for modifying commit history, such as amending commits and using rebase.
+Key Commands:
+git commit --amend: Modify the most recent commit.
+git rebase: Reapply commits on top of another base tip.
+git commit:	Commits staged changes; in which Detailed messages needed
+git commit -a:	Commits all modified tracked files; skips staging, Quick commits without staging
+git commit -m "message": Commits with an inline message; Don not need to write on editor(skips editor), Quick, simple commits
+git commit -am "message": Combines staging and committing with an inline message, Efficient power user workflow
+git commit --amend: Modifies the last commit; allows editing of the previous message, Correcting mistakes in the last commit
+
+7: Git name and email:
+Adding our name and email globally:
+	git config --global user.name "Hassan"
+	git config --global user.email "connecthassan76@gmail.com"
+Verify the changes:
+	git config --list
+
+8: Git Stash:
+	Git stash saves local modification and reverts your working directory to match the last commit.
+	it allow to quickly switch contexts without commiting incomplete work.
+	The stashed changes are stored locally in your repository under .git/refs/stash, allowing you to retrieve them later using commands like git stash apply or git stash pop.
+
+Working:
+	git stash: To stash changes(if add optional message: git stash push -m "Message")
+	git stash list: To see the list of stash chnages
+	git stash apply: To apply the most recent stash
+	git stash pop: remove the stash from the list
+	git stash drop <stash@{index}>: To remove a specific stash, run
+	git stash clear: To clear all stashes at once, use:
